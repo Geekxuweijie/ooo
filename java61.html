@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            width: 100%;
+            overflow: hidden;
+        }
+        .header-center{
+            width: 100%;
+            height: 100px;
+            background: red;
+            float: left;
+
+        }
+        .header-left{
+            width: 25%;
+            height:100px;
+            background: blue;
+            float: left;
+            margin-left: -100%;
+        }
+        .header-right{
+            width: 25%;
+            height:100px;
+            background: green;
+            float: left;
+            margin-left: -25%;
+        }
+        .header-center-inner{
+            padding-left: 25%;
+        }
+        .header-bottom{
+            width: 100%;
+            height: 50px;
+            background: yellow;
+            margin-top: 100px;
+        }
+        .header-bottom-1{
+            width: 25%;
+            height: 50px;
+            background: red;
+        }
+        .header-bottom-1-inner{
+            position: absolute;
+            width: 25%;
+            height: 300px;
+            top: 150px;
+            display: none;
+
+        }
+        .inner{
+            width: 100%;
+            height: 25%;
+
+        }
+        .inner1{
+            background: blue;
+        }
+        .inner2{
+            background: yellow;
+        }
+        .inner3{
+            background: green;
+        }
+        .inner4{
+            background: pink;
+        }
+        .move{
+            display: none;
+            position: absolute;
+            width: 200px;
+            background: red;
+            height: 300px;
+            left: 100%;
+        }
+        .moveImg{
+            width: 100%;
+            height: 300px;
+            background: deepskyblue;
+        }
+        .center{
+            width: 50%;
+            margin: auto;
+        }
+        .center-header{
+            width: 100%;
+            height: 200px;
+            background: deeppink;
+
+        }
+        .item{
+            width: 20%;
+            height: 150px;
+            margin: 25px 2%;
+        }
+        .item1{
+            background: red;
+            float: left;
+        }
+        .item2{
+            background: green;
+            float: left;
+        }
+        .item3{
+            background: yellow;
+            float: left;
+        }
+        .item4{
+            background: pink;
+            float: left;
+        }
+        .footer{
+            width: 50%;
+            margin: auto;
+        }
+        .footer1{
+            width: 100%;
+            padding: 20px 0;
+        }
+        .footer1-header{
+            width: 100%;
+            height: 50px;
+            background: red;
+        }
+        .footer1-bottom{
+            width: 100%;
+            height: 300px;
+            background: yellow;
+            margin: 20px 0;
+        }
+        .footer1-bottom-left{
+            width: 25%;
+            height: 300px;
+            background: red;
+            float: left;
+        }
+        .footer1-bottom-right{
+            width: 75%;
+            height: 300px;
+            background: green;
+            float: left;
+        }
+
+        .footer2{
+            width: 100%;
+            padding: 20px 0;
+        }
+        .footer2-header{
+            width: 100%;
+            height: 50px;
+            background: red;
+        }
+        .footer2-bottom{
+            width: 100%;
+            height: 300px;
+            background: yellow;
+            margin: 20px 0;
+        }
+        .footer2-bottom-left{
+            width: 25%;
+            height: 300px;
+            background: red;
+            float: left;
+        }
+        .footer2-bottom-right{
+            width: 75%;
+            height: 300px;
+            background: green;
+            float: left;
+        }
+
+        .footer3{
+            width: 100%;
+            padding: 20px 0;
+        }
+        .footer3-header{
+            width: 100%;
+            height: 50px;
+            background: red;
+        }
+        .footer3-bottom{
+            width: 100%;
+            height: 300px;
+            background: yellow;
+            margin: 20px 0;
+        }
+        .footer3-bottom-left{
+            width: 25%;
+            height: 300px;
+            background: red;
+            float: left;
+        }
+        .footer3-bottom-right{
+            width: 75%;
+            height: 300px;
+            background: green;
+            float: left;
+        }
+
+        .footer4{
+            width: 100%;
+            padding: 20px 0;
+        }
+        .footer4-header{
+            width: 100%;
+            height: 50px;
+            background: red;
+        }
+        .footer4-bottom{
+            width: 100%;
+            height: 300px;
+            background: yellow;
+            margin: 20px 0;
+        }
+        .footer4-bottom-left{
+            width: 25%;
+            height: 300px;
+            background: red;
+            float: left;
+        }
+        .footer4-bottom-right{
+            width: 75%;
+            height: 300px;
+            background: green;
+            float: left;
+        }
+
+        .footer5{
+            width: 100%;
+            padding: 20px 0;
+        }
+        .footer5-header{
+            width: 100%;
+            height: 50px;
+            background: red;
+        }
+        .footer5-bottom{
+            width: 100%;
+            height: 300px;
+            background: yellow;
+            margin: 20px 0;
+        }
+        .footer5-bottom-left{
+            width: 25%;
+            height: 300px;
+            background: red;
+            float: left;
+        }
+        .footer5-bottom-right{
+            width: 75%;
+            height: 300px;
+            background: green;
+            float: left;
+        }
+        .footer-outer{
+            width: 100%;
+            height: 100px;
+            background: blue;
+
+        }
+        .bottom{
+            width: 100%;
+            height: 100px;
+            background: #ccc;
+            margin: 25px 0;
+        }
+        .bottom1{
+            width: 50%;
+            height: 200px;
+            background: lightyellow;
+            margin: auto;
+        }
+        .lou{
+            width: 50px;
+            height: 300px;
+            background: darkred;
+            position: fixed;
+            right: 20px;
+            top: 50px;
+            opacity: 0;
+            transition: all 2s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="header">
+            <div class="header-center">
+                <div class="header-center-inner">中间</div>
+            </div>
+            <div class="header-left">左边</div>
+            <div class="header-right">右边</div>
+            <div class="header-bottom">
+                <div class="header-bottom-1">
+                    <div class="header-bottom-1-inner">
+                        <div class="inner1 inner">
+                            <div class="move move1">第一个</div>
+                            <div class="move move2">第二个</div>
+                            <div class="move move3">第三个</div>
+                            <div class="move move4">第四个</div>
+                        </div>
+                        <div class="inner2 inner">
+
+                        </div>
+                        <div class="inner3 inner">
+
+                        </div>
+                        <div class="inner4 inner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="moveImg">轮播图</div>
+        <div class="center">
+            <div class="center-header">
+                <div class="item item1"></div>
+                <div class="item item2"></div>
+                <div class="item item3"></div>
+                <div class="item item4"></div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="footer1">
+                <div class="footer1-header"></div>
+                <div class="footer1-bottom">
+                    <div class="footer1-bottom-left"></div>
+                    <div class="footer1-bottom-right"></div>
+                </div>
+            </div>
+
+            <div class="footer2">
+                <div class="footer2-header"></div>
+                <div class="footer2-bottom">
+                    <div class="footer2-bottom-left"></div>
+                    <div class="footer2-bottom-right"></div>
+                </div>
+            </div>
+
+                <div class="footer-outer"></div>
+
+            <div class="footer3">
+                <div class="footer3-header"></div>
+                <div class="footer3-bottom">
+                    <div class="footer3-bottom-left"></div>
+                    <div class="footer3-bottom-right"></div>
+                </div>
+            </div>
+
+            <div class="footer-outer"></div>
+
+            <div class="footer4">
+                <div class="footer4-header"></div>
+                <div class="footer4-bottom">
+                    <div class="footer4-bottom-left"></div>
+                    <div class="footer4-bottom-right"></div>
+                </div>
+            </div>
+
+            <div class="footer-outer"></div>
+
+            <div class="footer5">
+                <div class="footer5-header"></div>
+                <div class="footer5-bottom">
+                    <div class="footer5-bottom-left"></div>
+                    <div class="footer5-bottom-right"></div>
+                </div>
+            </div>
+
+            <div class="footer-outer"></div>
+
+        </div>
+        <div class="bottom"></div>
+        <div class="bottom1"></div>
+        <div class="lou"></div>
+    </div>
+
+</body>
+    <script>
+        var lou=document.getElementsByClassName("lou")[0];
+        var header=document.getElementsByClassName("header-bottom-1")[0];
+        var bottom=document.getElementsByClassName("header-bottom-1-inner")[0];
+        var inner=document.getElementsByClassName("inner");
+        var move=document.getElementsByClassName("move");
+      document.addEventListener("mousewheel",function () {
+         var top=document.body.scrollTop;
+          if(top>300&&top<=2800){
+              lou.style.opacity=1;
+              
+          }else if(top>2800){
+              document.body.scrollTop=0;
+          }else {
+              lou.style.opacity=0;
+          }
+          
+      });
+        var isok=true;
+        if(isok==true) {
+            header.onclick = function () {
+                bottom.style.display = "block";
+                isok=false;
+            }
+            for (var i = 0; i < inner.length; i++) {
+                inner[i].onclick = function (i) {
+                    return function () {
+                        move[i].style.display = "block";
+                    }
+
+                }(i);
+            }
+        }
+        if(isok==false){
+            header.onclick = function () {
+                bottom.style.display = "none";
+                isok=true;
+            }
+        }
+    </script>
+</html>
